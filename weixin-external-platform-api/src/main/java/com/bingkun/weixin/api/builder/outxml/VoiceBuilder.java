@@ -14,6 +14,14 @@ public final class VoiceBuilder extends BaseBuilder<VoiceBuilder, WxMpXmlOutVoic
         return this;
     }
 
+    public String getMediaId() {
+        return mediaId;
+    }
+
+    public void setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+    }
+
     @Override
     public WxMpXmlOutVoiceMessage build() {
         WxMpXmlOutVoiceMessage m = new WxMpXmlOutVoiceMessage();

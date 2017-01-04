@@ -1,20 +1,12 @@
 package com.bingkun.weixin.api.dto.pay.result;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Builder;
 
 /**
  * 企业付款返回结果
  * Created by chenxiaobian on 2016/10/02.
  */
 @XStreamAlias("xml")
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class WxEntPayResult extends WxPayBaseResult {
 
     /**
@@ -46,4 +38,44 @@ public class WxEntPayResult extends WxPayBaseResult {
      */
     @XStreamAlias("payment_time")
     private String paymentTime;
+
+    public String getMchAppid() {
+        return mchAppid;
+    }
+
+    public void setMchAppid(String mchAppid) {
+        this.mchAppid = mchAppid;
+    }
+
+    public String getDeviceInfo() {
+        return deviceInfo;
+    }
+
+    public void setDeviceInfo(String deviceInfo) {
+        this.deviceInfo = deviceInfo;
+    }
+
+    public String getPartnerTradeNo() {
+        return partnerTradeNo;
+    }
+
+    public void setPartnerTradeNo(String partnerTradeNo) {
+        this.partnerTradeNo = partnerTradeNo;
+    }
+
+    public String getPaymentNo() {
+        return paymentNo;
+    }
+
+    public void setPaymentNo(String paymentNo) {
+        this.paymentNo = paymentNo;
+    }
+
+    public String getPaymentTime() {
+        return paymentTime;
+    }
+
+    public void setPaymentTime(String paymentTime) {
+        this.paymentTime = paymentTime;
+    }
 }

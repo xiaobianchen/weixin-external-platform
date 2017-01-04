@@ -43,10 +43,6 @@ public final class MusicBuilder extends BaseBuilder<MusicBuilder, WxMpXmlOutMusi
     public WxMpXmlOutMusicMessage build() {
         WxMpXmlOutMusicMessage m = new WxMpXmlOutMusicMessage();
         setCommon(m);
-        m.setTitle(this.title);
-        m.setDescription(this.description);
-        m.setHqMusicUrl(this.hqMusicUrl);
-        m.setMusicUrl(this.musicUrl);
         m.setThumbMediaId(this.thumbMediaId);
         return m;
     }

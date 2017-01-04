@@ -1,18 +1,12 @@
 package com.bingkun.weixin.api.dto.template;
 
 import com.bingkun.weixin.api.util.json.WxMpGsonBuilder;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Builder;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class WxMpTemplateMessage implements Serializable {
     private String toUser;
     private String templateId;
@@ -27,19 +21,80 @@ public class WxMpTemplateMessage implements Serializable {
         return WxMpGsonBuilder.INSTANCE.create().toJson(this);
     }
 
+    public String getToUser() {
+        return toUser;
+    }
+
+    public void setToUser(String toUser) {
+        this.toUser = toUser;
+    }
+
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public List<WxMpTemplateData> getData() {
+        return data;
+    }
+
+    public void setData(List<WxMpTemplateData> data) {
+        this.data = data;
+    }
+
     public static WxMpTemplateMessageBuilder builder() {
         return new WxMpTemplateMessageBuilder();
     }
 
-    @Data
-    @Builder
-    @AllArgsConstructor
-    @NoArgsConstructor
+
     public static class WxMpTemplateMessageBuilder {
         private String toUser;
         private String templateId;
         private String url;
         private List<WxMpTemplateData> data = new ArrayList<>();
+
+        public String getToUser() {
+            return toUser;
+        }
+
+        public void setToUser(String toUser) {
+            this.toUser = toUser;
+        }
+
+        public String getTemplateId() {
+            return templateId;
+        }
+
+        public void setTemplateId(String templateId) {
+            this.templateId = templateId;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public List<WxMpTemplateData> getData() {
+            return data;
+        }
+
+        public void setData(List<WxMpTemplateData> data) {
+            this.data = data;
+        }
 
         public WxMpTemplateMessageBuilder toUser(String toUser) {
             this.toUser = toUser;

@@ -8,18 +8,10 @@ import com.bingkun.weixin.api.util.xml.XStreamTransformer;
 import com.bingkun.weixin.common.util.xml.XStreamCDataConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Builder;
 
 import java.io.Serializable;
 
 @XStreamAlias("xml")
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public abstract class WxMpXmlOutMessage implements Serializable {
 
     @XStreamAlias("ToUserName")
@@ -36,6 +28,38 @@ public abstract class WxMpXmlOutMessage implements Serializable {
     @XStreamAlias("MsgType")
     @XStreamConverter(value = XStreamCDataConverter.class)
     protected String msgType;
+
+    public String getToUserName() {
+        return toUserName;
+    }
+
+    public void setToUserName(String toUserName) {
+        this.toUserName = toUserName;
+    }
+
+    public String getFromUserName() {
+        return fromUserName;
+    }
+
+    public void setFromUserName(String fromUserName) {
+        this.fromUserName = fromUserName;
+    }
+
+    public Long getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getMsgType() {
+        return msgType;
+    }
+
+    public void setMsgType(String msgType) {
+        this.msgType = msgType;
+    }
 
     public String toXml() {
         return XStreamTransformer.toXml((Class<WxMpXmlOutMessage>) this.getClass(), this);
