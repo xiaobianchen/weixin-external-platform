@@ -5,6 +5,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
+ * Created by chenxiaobian on 16/12/19.
  * 自定义的ToString方法，用于产生去掉空值属性的字符串
  */
 public class ToStringUtils {

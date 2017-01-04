@@ -27,7 +27,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * httpclient 连接管理器
- * <p>
  * Created by chenxiaobian on 16/12/19.
  */
 @NotThreadSafe
@@ -100,10 +99,8 @@ public class DefaultApacheHttpClientBuilder implements ApacheHttpClientBuilder {
 
     /**
      * 获取链接的超时时间设置,默认3000ms
-     * <p>
      * 设置为零时不超时,一直等待.
      * 设置为负数是使用系统默认设置(非上述的3000ms的默认值,而是httpclient的默认设置).
-     * </p>
      *
      * @param connectionRequestTimeout 获取链接的超时时间设置(单位毫秒),默认3000ms
      */
@@ -113,10 +110,8 @@ public class DefaultApacheHttpClientBuilder implements ApacheHttpClientBuilder {
 
     /**
      * 建立链接的超时时间,默认为5000ms.由于是在链接池获取链接,此设置应该并不起什么作用
-     * <p>
      * 设置为零时不超时,一直等待.
      * 设置为负数是使用系统默认设置(非上述的5000ms的默认值,而是httpclient的默认设置).
-     * </p>
      *
      * @param connectionTimeout 建立链接的超时时间设置(单位毫秒),默认5000ms
      */
@@ -136,9 +131,7 @@ public class DefaultApacheHttpClientBuilder implements ApacheHttpClientBuilder {
 
     /**
      * 空闲链接的超时时间,默认60000ms.
-     * <p>
      * 超时的链接将在下一次空闲链接检查是被销毁
-     * </p>
      *
      * @param idleConnTimeout 空闲链接的超时时间,默认60000ms.
      */

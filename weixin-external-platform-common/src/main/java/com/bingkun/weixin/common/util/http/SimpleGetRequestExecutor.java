@@ -12,7 +12,6 @@ import java.io.IOException;
 
 /**
  * Created by chenxiaobian on 16/10/19.
- * <p>
  * 简单的GET请求执行器
  */
 public class SimpleGetRequestExecutor implements RequestExecutor<String, String> {

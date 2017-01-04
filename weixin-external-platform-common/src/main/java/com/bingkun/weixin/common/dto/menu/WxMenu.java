@@ -3,6 +3,10 @@ package com.bingkun.weixin.common.dto.menu;
 
 import com.bingkun.weixin.common.util.ToStringUtils;
 import com.bingkun.weixin.common.util.json.WxGsonBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Builder;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,9 +17,12 @@ import java.util.List;
 
 /**
  * Created by chenxiaobian on 17/1/1
- *
  * 微信菜单
  */
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class WxMenu implements Serializable {
 
     private List<WxMenuButton> buttons = new ArrayList<>();
@@ -28,22 +35,6 @@ public class WxMenu implements Serializable {
 
     public static WxMenu fromJson(InputStream is) {
         return WxGsonBuilder.create().fromJson(new InputStreamReader(is, StandardCharsets.UTF_8), WxMenu.class);
-    }
-
-    public List<WxMenuButton> getButtons() {
-        return this.buttons;
-    }
-
-    public void setButtons(List<WxMenuButton> buttons) {
-        this.buttons = buttons;
-    }
-
-    public WxMenuRule getMatchRule() {
-        return this.matchRule;
-    }
-
-    public void setMatchRule(WxMenuRule matchRule) {
-        this.matchRule = matchRule;
     }
 
     public String toJson() {

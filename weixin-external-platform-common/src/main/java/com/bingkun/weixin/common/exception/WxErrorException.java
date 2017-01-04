@@ -18,7 +18,11 @@ public class WxErrorException extends RuntimeException {
         this.error = error;
     }
 
-    public WxErrorException(String msg,Throwable throwable){
+    public WxErrorException(String msg){
+        super(msg);
+    }
+
+    public WxErrorException(String msg, Throwable throwable){
         super(msg);
     }
 

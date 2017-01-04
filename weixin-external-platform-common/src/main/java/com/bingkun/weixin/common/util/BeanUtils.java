@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * Created by chenxiaobian on 16/12/19.
  * bean操作的一些工具类
  */
 public class BeanUtils {

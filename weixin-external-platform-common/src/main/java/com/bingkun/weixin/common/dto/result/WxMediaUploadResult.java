@@ -17,7 +17,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WxMediaUploadResult implements Serializable {
-    private static final long serialVersionUID = 330834334738622341L;
 
     private String type;
     private String mediaId;

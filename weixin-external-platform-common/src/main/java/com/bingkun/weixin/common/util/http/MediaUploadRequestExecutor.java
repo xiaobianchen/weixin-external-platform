@@ -18,7 +18,6 @@ import java.io.IOException;
 
 /**
  * Created by chenxiaobian on 17/1/1.
- *
  * 上传媒体文件请求执行器，请求的参数是File, 返回的结果是String
  */
 public class MediaUploadRequestExecutor implements RequestExecutor<WxMediaUploadResult, File> {
