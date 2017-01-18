@@ -1,8 +1,8 @@
 package com.bingkun.weixin.mp.dto;
 
 
-import com.bingkun.weixin.api.builder.kefu.*;
 import com.bingkun.weixin.api.util.json.WxMpGsonBuilder;
+import com.bingkun.weixin.mp.dto.custombuilder.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
