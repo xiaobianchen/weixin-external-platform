@@ -4,7 +4,7 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 import com.bingkun.weixin.mp.dto.WxMpXmlOutImageMessage;
 
 /**
- * 图片消息builder
+ * Created by chenxiaobian 17/1/19
  */
 public final class ImageBuilder extends BaseBuilder<ImageBuilder, WxMpXmlOutImageMessage> {
 

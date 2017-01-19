@@ -6,6 +6,9 @@ import com.bingkun.weixin.mp.dto.WxMpCustomMessage;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by chenxiaobian 17/1/19
+ */
 public final class NewsBuilder extends BaseBuilder<NewsBuilder> {
 
     private List<WxMpCustomMessage.WxArticle> articles = new ArrayList<WxMpCustomMessage.WxArticle>();

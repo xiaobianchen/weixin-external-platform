@@ -1,5 +1,8 @@
 package com.bingkun.weixin.common.session;
 
+/**
+ * Created by chenxiaobian 17/1/19
+ */
 public interface WxSessionManager {
 
     /**
@@ -11,6 +14,4 @@ public interface WxSessionManager {
      * 获取某个sessionId对应的session,如果sessionId没有对应的session，若create为true则新建一个，否则返回null。
      */
     WxSession getSession(String sessionId, boolean create);
-
-
 }

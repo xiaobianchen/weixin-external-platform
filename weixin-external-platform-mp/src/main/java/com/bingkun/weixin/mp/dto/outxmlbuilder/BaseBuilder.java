@@ -2,6 +2,9 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 
 import com.bingkun.weixin.mp.dto.WxMpXmlOutMessage;
 
+/**
+ * Created by chenxiaobian 17/1/19
+ */
 public abstract class BaseBuilder<BuilderType, ValueType> {
   
   protected String toUserName;

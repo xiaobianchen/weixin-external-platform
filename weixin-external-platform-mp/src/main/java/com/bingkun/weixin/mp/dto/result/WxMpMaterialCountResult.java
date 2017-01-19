@@ -1,50 +1,24 @@
 package com.bingkun.weixin.mp.dto.result;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Builder;
+
 import java.io.Serializable;
 
+/**
+ * Created by chenxiaobian 17/1/19
+ */
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class WxMpMaterialCountResult implements Serializable {
 
-  private int voiceCount;
-  private int videoCount;
-  private int imageCount;
-  private int newsCount;
-
-  public int getVoiceCount() {
-    return voiceCount;
-  }
-
-  public void setVoiceCount(int voiceCount) {
-    this.voiceCount = voiceCount;
-  }
-
-  public int getVideoCount() {
-    return videoCount;
-  }
-
-  public void setVideoCount(int videoCount) {
-    this.videoCount = videoCount;
-  }
-
-  public int getImageCount() {
-    return imageCount;
-  }
-
-  public void setImageCount(int imageCount) {
-    this.imageCount = imageCount;
-  }
-
-  public int getNewsCount() {
-    return newsCount;
-  }
-
-  public void setNewsCount(int newsCount) {
-    this.newsCount = newsCount;
-  }
-
-  @Override
-  public String toString() {
-    return "WxMpMaterialCountResult [" + "voiceCount=" + voiceCount + ", videoCount=" + videoCount
-        + ", imageCount=" + imageCount + ", newsCount=" + newsCount + "]";
-  }
+    private int voiceCount;
+    private int videoCount;
+    private int imageCount;
+    private int newsCount;
 }
 

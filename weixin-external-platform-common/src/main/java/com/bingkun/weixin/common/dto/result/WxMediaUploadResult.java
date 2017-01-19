@@ -11,6 +11,7 @@ import java.io.Serializable;
 
 /***
  * Created by chenxiaobian on 17/1/1.
+ * 微信媒体上传
  */
 @Data
 @Builder

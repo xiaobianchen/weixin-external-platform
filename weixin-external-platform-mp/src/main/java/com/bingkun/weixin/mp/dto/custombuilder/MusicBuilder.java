@@ -3,6 +3,9 @@ package com.bingkun.weixin.mp.dto.custombuilder;
 import com.bingkun.weixin.common.constants.WxConsts;
 import com.bingkun.weixin.mp.dto.WxMpCustomMessage;
 
+/**
+ * Created by chenxiaobian 17/1/19
+ */
 public final class MusicBuilder extends BaseBuilder<MusicBuilder> {
     private String title;
     private String description;

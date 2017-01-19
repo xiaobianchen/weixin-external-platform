@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
+ * Created by chenxiaobian on 17/1/19
  * 基于内存的session manager
  */
 public class StandardSessionManager implements WxSessionManager, InternalSessionManager {
@@ -21,15 +22,11 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
      */
     private final AtomicBoolean backgroundProcessStarted = new AtomicBoolean(false);
 
-
     protected Map<String, InternalSession> sessions = new ConcurrentHashMap<>();
-
 
     protected int maxActiveSessions = -1;
 
-
     protected int rejectedSessions = 0;
-
 
     protected int maxInactiveInterval = 30 * 60;
 
@@ -66,7 +63,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
             return session.getSession();
         }
 
-        // Create a new session if requested and the response is not committed
         if (!create) {
             return (null);
         }
@@ -93,7 +89,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
         }
     }
 
-
     @Override
     public InternalSession findSession(String id) {
 
@@ -118,7 +113,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
                     this.maxActiveSessions);
         }
 
-        // Recycle or create a Session instance
         InternalSession session = createEmptySession();
 
         // Initialize the properties of the new session and return it
@@ -130,7 +124,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
         this.sessionCounter++;
 
         return (session);
-
     }
 
 
@@ -138,7 +131,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
     public int getActiveSessions() {
         return this.sessions.size();
     }
-
 
     @Override
     public InternalSession createEmptySession() {
@@ -184,10 +176,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
 
     }
 
-    /**
-     * Return the set of active Sessions associated with this Manager.
-     * If this Manager has no active Sessions, a zero-length array is returned.
-     */
     @Override
     public InternalSession[] findSessions() {
 
@@ -202,9 +190,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
             processExpires();
     }
 
-    /**
-     * Invalidate all sessions that have expired.
-     */
     public void processExpires() {
 
         long timeNow = System.currentTimeMillis();
@@ -220,11 +205,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
 
     }
 
-    /**
-     * Set the manager checks frequency.
-     *
-     * @param processExpiresFrequency the new manager checks frequency
-     */
     @Override
     public void setProcessExpiresFrequency(int processExpiresFrequency) {
 
@@ -233,7 +213,6 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
         }
 
         this.processExpiresFrequency = processExpiresFrequency;
-
     }
 
     @Override
@@ -241,21 +220,12 @@ public class StandardSessionManager implements WxSessionManager, InternalSession
         this.backgroundProcessorDelay = backgroundProcessorDelay;
     }
 
-    /**
-     * Return the descriptive short name of this Manager implementation.
-     */
     public String getName() {
 
         return (name);
 
     }
 
-    /**
-     * Set the maximum number of active Sessions allowed, or -1 for
-     * no limit.
-     *
-     * @param max The new maximum number of sessions
-     */
     @Override
     public void setMaxActiveSessions(int max) {
 
