@@ -30,6 +30,7 @@
 package com.bingkun.weixin.common.util.crypto;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
@@ -42,8 +43,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.StringReader;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 public class WxCryptUtil {
 
@@ -194,6 +194,28 @@ public class WxCryptUtil {
         // 解密
         String result = decrypt(cipherText);
         return result;
+    }
+
+    public static String createSign(Map<String, String> packageParams, String signKey) {
+        SortedMap<String, String> sortedMap = new TreeMap<String, String>();
+        sortedMap.putAll(packageParams);
+
+        List<String> keys = new ArrayList<String>(packageParams.keySet());
+        Collections.sort(keys);
+
+
+        StringBuffer toSign = new StringBuffer();
+        for (String key : keys) {
+            String value = packageParams.get(key);
+            if (null != value && !"".equals(value) && !"sign".equals(key)
+                    && !"key".equals(key)) {
+                toSign.append(key + "=" + value + "&");
+            }
+        }
+        toSign.append("key=" + signKey);
+        String sign = DigestUtils.md5Hex(toSign.toString())
+                .toUpperCase();
+        return sign;
     }
 
     /**

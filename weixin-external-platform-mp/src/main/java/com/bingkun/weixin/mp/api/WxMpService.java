@@ -24,11 +24,7 @@ public interface WxMpService {
     public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     /**
-     * <pre>
      * 验证推送过来的消息的正确性
-     * 详情请见: http://mp.weixin.qq.com/wiki/index.php?title=验证消息真实性
-     * </pre>
-     *
      * @param timestamp
      * @param nonce
      * @param signature
@@ -39,13 +35,10 @@ public interface WxMpService {
     /**
      * 获取access_token, 不强制刷新access_token
      *
-     * @return
-     * @see #getAccessToken(boolean)
      */
     public String getAccessToken() throws WxErrorException;
 
     /**
-     * <pre>
      * 获取access_token，本方法线程安全
      * 且在多线程同时刷新时只刷新一次，避免超出2000次/日的调用次数上限
      *
@@ -58,7 +51,6 @@ public interface WxMpService {
      *
      * @param forceRefresh 强制刷新
      * @return
-     * @throws me.chanjar.weixin.common.exception.WxErrorException
      */
     public String getAccessToken(boolean forceRefresh) throws WxErrorException;
 
@@ -72,12 +64,8 @@ public interface WxMpService {
     public String getJsapiTicket() throws WxErrorException;
 
     /**
-     * <pre>
      * 获得jsapi_ticket
      * 获得时会检查jsapiToken是否过期，如果过期了，那么就刷新一下，否则就什么都不干
-     *
-     * 详情请见：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E9.99.84.E5.BD.951-JS-SDK.E4.BD.BF.E7.94.A8.E6.9D.83.E9.99.90.E7.AD.BE.E5.90.8D.E7.AE.97.E6.B3.95
-     * </pre>
      *
      * @param forceRefresh 强制刷新
      * @return
@@ -86,11 +74,7 @@ public interface WxMpService {
     public String getJsapiTicket(boolean forceRefresh) throws WxErrorException;
 
     /**
-     * <pre>
      * 创建调用jsapi时所需要的签名
-     *
-     * 详情请见：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E9.99.84.E5.BD.951-JS-SDK.E4.BD.BF.E7.94.A8.E6.9D.83.E9.99.90.E7.AD.BE.E5.90.8D.E7.AE.97.E6.B3.95
-     * </pre>
      *
      * @param url url
      * @return
@@ -98,7 +82,6 @@ public interface WxMpService {
     public WxJsapiSignature createJsapiSignature(String url) throws WxErrorException;
 
     /**
-     * <pre>
      * 上传多媒体文件
      *
      * 上传的多媒体文件有格式和大小限制，如下：
@@ -110,15 +93,12 @@ public interface WxMpService {
      * 详情请见: http://mp.weixin.qq.com/wiki/index.php?title=上传下载多媒体文件
      * </pre>
      *
-     * @param mediaType   媒体类型, 请看{@link me.chanjar.weixin.common.api.WxConsts}
-     * @param fileType    文件类型，请看{@link me.chanjar.weixin.common.api.WxConsts}
      * @param inputStream 输入流
      * @throws WxErrorException
      */
     public WxMediaUploadResult mediaUpload(String mediaType, String fileType, InputStream inputStream) throws WxErrorException, IOException;
 
     /**
-     * <pre>
      * 上传非图文永久素材
      *
      * 上传的多媒体文件有格式和大小限制，如下：
@@ -128,30 +108,23 @@ public interface WxMpService {
      *   缩略图（thumb）：文档未说明
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html
-     * </pre>
      *
-     * @param mediaType 媒体类型, 请看{@link me.chanjar.weixin.common.api.WxConsts}
-     * @param material  上传的素材, 请看{@link me.chanjar.weixin.mp.bean.WxMpMaterial}
-     * @return
-     * @throws WxErrorException
+     *
      */
     public WxMpMaterialUploadResult materialFileUpload(String mediaType, WxMpMaterial material) throws WxErrorException;
 
     /**
-     * <pre>
      * 上传永久图文素材
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/14/7e6c03263063f4813141c3e17dd4350a.html
      * </pre>
      *
-     * @param news 上传的图文消息, 请看{@link me.chanjar.weixin.mp.bean.WxMpMaterialNews}
      * @return
      * @throws WxErrorException
      */
     public WxMpMaterialUploadResult materialNewsUpload(WxMpMaterialNews news) throws WxErrorException;
 
     /**
-     * <pre>
      * 下载声音或者图片永久素材
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/4/b3546879f07623cb30df9ca0e420a5d0.html
@@ -164,7 +137,6 @@ public interface WxMpService {
     public InputStream materialImageOrVoiceDownload(String media_id) throws WxErrorException;
 
     /**
-     * <pre>
      * 获取视频永久素材的信息和下载地址
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/4/b3546879f07623cb30df9ca0e420a5d0.html
@@ -177,11 +149,9 @@ public interface WxMpService {
     public WxMpMaterialVideoInfoResult materialVideoInfo(String media_id) throws WxErrorException;
 
     /**
-     * <pre>
      * 获取图文永久素材的信息
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/4/b3546879f07623cb30df9ca0e420a5d0.html
-     * </pre>
      *
      * @param media_id 永久素材的id
      * @return
@@ -190,13 +160,11 @@ public interface WxMpService {
     public WxMpMaterialNews materialNewsInfo(String media_id) throws WxErrorException;
 
     /**
-     * <pre>
      * 更新图文永久素材
      *
      * 详情请见: http://mp.weixin.qq.com/wiki/4/19a59cba020d506e767360ca1be29450.html
      * </pre>
      *
-     * @param wxMpMaterialArticleUpdate 用来更新图文素材的bean, 请看{@link me.chanjar.weixin.mp.bean.WxMpMaterialArticleUpdate}
      * @return
      * @throws WxErrorException
      */
