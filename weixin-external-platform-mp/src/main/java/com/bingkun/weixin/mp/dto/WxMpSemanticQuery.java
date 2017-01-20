@@ -1,6 +1,7 @@
 package com.bingkun.weixin.mp.dto;
 
-import com.bingkun.weixin.api.util.json.WxMpGsonBuilder;
+
+import com.bingkun.weixin.mp.util.json.WxMpGsonBuilder;
 
 import java.io.Serializable;
 

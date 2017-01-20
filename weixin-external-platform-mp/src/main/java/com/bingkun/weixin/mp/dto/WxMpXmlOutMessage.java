@@ -1,11 +1,12 @@
 package com.bingkun.weixin.mp.dto;
 
-import com.bingkun.weixin.api.builder.kefu.*;
-import com.bingkun.weixin.api.builder.outxml.TransferCustomerServiceBuilder;
-import com.bingkun.weixin.api.service.WxMpConfigStorage;
-import com.bingkun.weixin.api.util.crypto.WxMpCryptUtil;
-import com.bingkun.weixin.api.util.xml.XStreamTransformer;
+
 import com.bingkun.weixin.common.util.xml.XStreamCDataConverter;
+import com.bingkun.weixin.mp.api.WxMpConfigStorage;
+import com.bingkun.weixin.mp.dto.custombuilder.*;
+import com.bingkun.weixin.mp.dto.outxmlbuilder.TransferCustomerServiceBuilder;
+import com.bingkun.weixin.mp.util.crypto.WxMpCryptUtil;
+import com.bingkun.weixin.mp.util.xml.XStreamTransformer;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 

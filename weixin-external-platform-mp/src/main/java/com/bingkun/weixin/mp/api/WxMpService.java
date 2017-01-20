@@ -247,7 +247,6 @@ public interface WxMpService {
 
     /**
      * 自定义菜单删除接口
-     * 详情请见: http://mp.weixin.qq.com/wiki/index.php?title=自定义菜单删除接口
      *
      * @throws WxErrorException
      */
@@ -255,7 +254,6 @@ public interface WxMpService {
 
     /**
      * 删除个性化菜单接口
-     * 详情请见: http://mp.weixin.qq.com/wiki/0/c48ccd12b69ae023159b4bfaa7c39c20.html
      *
      * @param menuid
      * @throws WxErrorException
@@ -326,7 +324,6 @@ public interface WxMpService {
 
     /**
      * 设置用户备注名接口
-     * 详情请见: http://mp.weixin.qq.com/wiki/index.php?title=设置用户备注名接口
      *
      * @param openid 用户openid
      * @param remark 备注名
