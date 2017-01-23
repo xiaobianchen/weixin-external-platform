@@ -5,6 +5,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.io.Serializable;
 
 /**
+ * Created by chenxiaobian 17/1/21
  * 向微信用户个人发现金红包返回结果
  */
 @XStreamAlias("xml")

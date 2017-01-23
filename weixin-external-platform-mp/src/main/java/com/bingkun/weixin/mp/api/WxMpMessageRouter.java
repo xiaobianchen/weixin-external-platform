@@ -19,6 +19,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 微信消息路由器，通过代码化的配置，把来自微信的消息交给handler处理
  */
 public class WxMpMessageRouter {

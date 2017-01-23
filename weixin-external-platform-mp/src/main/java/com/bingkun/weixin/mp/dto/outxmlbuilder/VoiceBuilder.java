@@ -4,6 +4,7 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 import com.bingkun.weixin.mp.dto.WxMpXmlOutVoiceMessage;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 语音消息builder
  */
 public final class VoiceBuilder extends BaseBuilder<VoiceBuilder, WxMpXmlOutVoiceMessage> {

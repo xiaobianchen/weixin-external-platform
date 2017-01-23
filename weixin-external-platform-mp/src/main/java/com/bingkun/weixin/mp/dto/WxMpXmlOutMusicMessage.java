@@ -5,6 +5,9 @@ import com.bingkun.weixin.common.util.xml.XStreamCDataConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 
+/**
+ * Created by chenxiaobian 17/1/20
+ */
 @XStreamAlias("xml")
 public class WxMpXmlOutMusicMessage extends WxMpXmlOutMessage {
 

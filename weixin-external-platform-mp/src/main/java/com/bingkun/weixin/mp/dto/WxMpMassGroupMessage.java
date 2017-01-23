@@ -6,6 +6,7 @@ import com.bingkun.weixin.mp.util.json.WxMpGsonBuilder;
 import java.io.Serializable;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 分组群发的消息
  */
 public class WxMpMassGroupMessage implements Serializable {

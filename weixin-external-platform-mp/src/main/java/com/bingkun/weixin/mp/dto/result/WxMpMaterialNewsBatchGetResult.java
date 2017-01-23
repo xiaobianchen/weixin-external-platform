@@ -5,7 +5,9 @@ import com.bingkun.weixin.mp.dto.WxMpMaterialNews;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class WxMpMaterialNewsBatchGetResult implements Serializable {
 
   private int totalCount;

@@ -5,43 +5,46 @@ import com.bingkun.weixin.mp.util.json.WxMpGsonBuilder;
 
 import java.io.Serializable;
 
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class WxMpMaterialVideoInfoResult implements Serializable {
 
-  private String title;
-  private String description;
-  private String downUrl;
+    private String title;
+    private String description;
+    private String downUrl;
 
-  public String getTitle() {
-    return title;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-  public String getDescription() {
-    return description;
-  }
+    public String getDescription() {
+        return description;
+    }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-  public String getDownUrl() {
-    return downUrl;
-  }
+    public String getDownUrl() {
+        return downUrl;
+    }
 
-  public void setDownUrl(String downUrl) {
-    this.downUrl = downUrl;
-  }
+    public void setDownUrl(String downUrl) {
+        this.downUrl = downUrl;
+    }
 
-  public static WxMpMaterialVideoInfoResult fromJson(String json) {
-    return WxMpGsonBuilder.create().fromJson(json, WxMpMaterialVideoInfoResult.class);
-  }
+    public static WxMpMaterialVideoInfoResult fromJson(String json) {
+        return WxMpGsonBuilder.create().fromJson(json, WxMpMaterialVideoInfoResult.class);
+    }
 
-  @Override
-  public String toString() {
-    return "WxMpMaterialVideoInfoResult [title=" + title + ", description=" + description + ", downUrl=" + downUrl + "]";
-  }
+    @Override
+    public String toString() {
+        return "WxMpMaterialVideoInfoResult [title=" + title + ", description=" + description + ", downUrl=" + downUrl + "]";
+    }
 
 }

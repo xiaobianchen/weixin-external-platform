@@ -3,6 +3,7 @@ package com.bingkun.weixin.mp.dto.result;
 import java.io.Serializable;
 
 /**
+ * Created by chenxiaobian 17/1/22
  * 查询订单支付状态返回的结果
  */
 public class WxMpPayResult implements Serializable {

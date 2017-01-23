@@ -8,7 +8,9 @@ import com.google.gson.JsonObject;
 
 import java.util.List;
 
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class GsonHelper {
 
     public static boolean isNull(JsonElement element) {

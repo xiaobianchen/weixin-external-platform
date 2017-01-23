@@ -6,7 +6,9 @@ import com.bingkun.weixin.common.util.res.StringManager;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class StandardSession implements WxSession, InternalSession {
 
     protected static final StringManager sm = StringManager.getManager(Constants.Package);

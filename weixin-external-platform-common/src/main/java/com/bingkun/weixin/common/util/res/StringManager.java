@@ -4,28 +4,7 @@ import java.text.MessageFormat;
 import java.util.*;
 
 /**
- * An internationalization / localization helper class which reduces
- * the bother of handling ResourceBundles and takes care of the
- * common cases of message formating which otherwise require the
- * creation of Object arrays and such.
- * <p>
- * <p>The StringManager operates on a package basis. One StringManager
- * per package can be created and accessed via the getManager method
- * call.
- * <p>
- * <p>The StringManager will look for a ResourceBundle named by
- * the package name given plus the suffix of "LocalStrings". In
- * practice, this means that the localized information will be contained
- * in a LocalStrings.properties file located in the package
- * directory of the classpath.
- * <p>
- * <p>Please see the documentation for java.util.ResourceBundle for
- * more information.
- *
- * @author James Duncan Davidson [duncan@eng.sun.com]
- * @author James Todd [gonzo@eng.sun.com]
- * @author Mel Martinez [mmartinez@g1440.com]
- * @see ResourceBundle
+ * Created by chenxiaobian on 17/1/1.
  */
 public class StringManager {
 

@@ -7,6 +7,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by chenxiaobian 17/1/20
+ */
 public class WxMpTemplateMessage implements Serializable {
 
     private String toUser;

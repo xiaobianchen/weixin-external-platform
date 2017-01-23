@@ -4,6 +4,9 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Created by chenxiaobian 17/1/20
+ */
 public class WxMpMaterial {
 
     private String name;

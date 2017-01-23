@@ -9,6 +9,9 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 @Data
 @Builder
 @AllArgsConstructor

@@ -5,7 +5,9 @@ import com.google.gson.*;
 
 import java.lang.reflect.Type;
 
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class WxMediaUploadResultAdapter implements JsonDeserializer<WxMediaUploadResult> {
 
     @Override

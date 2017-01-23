@@ -4,6 +4,7 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 import com.bingkun.weixin.mp.dto.WxMpXmlOutTransferCustomerServiceMessage;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 客服消息builder
  */
 public final class TransferCustomerServiceBuilder extends BaseBuilder<TransferCustomerServiceBuilder, WxMpXmlOutTransferCustomerServiceMessage> {

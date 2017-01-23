@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * OpenId列表群发的消息
  */
 public class WxMpMassOpenIdsMessage implements Serializable {

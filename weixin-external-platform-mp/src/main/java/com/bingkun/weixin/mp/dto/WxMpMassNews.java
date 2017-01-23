@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 群发时用到的图文消息素材
  */
 public class WxMpMassNews implements Serializable {

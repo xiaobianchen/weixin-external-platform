@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * Created by chenxiaobian on 17/1/20
  * 累计用户数据接口的返回JSON数据包
- * http://mp.weixin.qq.com/wiki/3/ecfed6e1a0a03b5f35e5efac98e864b7.html
- * </pre>
+ *
  */
 public class WxMpUserCumulate implements Serializable {
 

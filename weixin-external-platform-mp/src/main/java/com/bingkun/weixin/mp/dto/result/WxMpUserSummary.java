@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 用户增减数据接口的返回JSON数据包
  */
 public class WxMpUserSummary implements Serializable {

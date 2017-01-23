@@ -4,6 +4,7 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 import com.bingkun.weixin.mp.dto.WxMpXmlOutMusicMessage;
 
 /**
+ * Created by chenxiaobian on 17/1/20
  * 音乐消息builder
  */
 public final class MusicBuilder extends BaseBuilder<MusicBuilder, WxMpXmlOutMusicMessage> {

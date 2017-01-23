@@ -1,7 +1,9 @@
 package com.bingkun.weixin.common.session;
 
 import java.util.Enumeration;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class StandardSessionFacade implements WxSession {
 
     private WxSession session = null;

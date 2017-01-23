@@ -1,5 +1,7 @@
 package com.bingkun.weixin.common.session;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class TooManyActiveSessionsException extends IllegalStateException {
 
     private final int maxActiveSessions;

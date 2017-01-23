@@ -49,6 +49,9 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.util.*;
 
+/**
+ * Created by chenxiaobian on 17/1/20.
+ */
 public class WxMpServiceImpl implements WxMpService {
 
     /**

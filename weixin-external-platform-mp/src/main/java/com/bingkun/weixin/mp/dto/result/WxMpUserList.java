@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 关注者列表
  *
  */

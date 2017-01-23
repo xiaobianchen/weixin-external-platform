@@ -19,6 +19,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ *
+ * Created by chenxiaobian on 17/1/1.
+ *
  * 下载媒体文件请求执行器，请求的参数是String, 返回的结果是File
  * 视频文件不支持下载
  */

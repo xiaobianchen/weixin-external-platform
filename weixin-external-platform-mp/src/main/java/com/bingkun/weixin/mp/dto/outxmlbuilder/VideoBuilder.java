@@ -4,6 +4,7 @@ package com.bingkun.weixin.mp.dto.outxmlbuilder;
 import com.bingkun.weixin.mp.dto.WxMpXmlOutVideoMessage;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 视频消息builder
  */
 public final class VideoBuilder extends BaseBuilder<VideoBuilder, WxMpXmlOutVideoMessage> {

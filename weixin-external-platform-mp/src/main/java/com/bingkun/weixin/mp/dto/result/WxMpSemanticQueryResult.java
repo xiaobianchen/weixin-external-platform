@@ -6,8 +6,8 @@ import com.bingkun.weixin.mp.util.json.WxMpGsonBuilder;
 import java.io.Serializable;
 
 /**
+ * Created by chenxiaobian 17/1/20
  * 语义理解查询结果对象
- *
  *
  */
 public class WxMpSemanticQueryResult implements Serializable {

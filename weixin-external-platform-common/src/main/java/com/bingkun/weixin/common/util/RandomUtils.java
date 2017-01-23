@@ -1,5 +1,8 @@
 package com.bingkun.weixin.common.util;
 
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class RandomUtils {
 
     private static final String RANDOM_STR = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

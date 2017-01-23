@@ -9,7 +9,9 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class InputStreamResponseHandler implements ResponseHandler<InputStream> {
 
     public static final ResponseHandler<InputStream> INSTANCE = new InputStreamResponseHandler();

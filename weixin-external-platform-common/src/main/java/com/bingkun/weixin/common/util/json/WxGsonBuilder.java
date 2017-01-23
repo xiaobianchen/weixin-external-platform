@@ -5,7 +5,9 @@ import com.bingkun.weixin.common.dto.result.WxError;
 import com.bingkun.weixin.common.dto.result.WxMediaUploadResult;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class WxGsonBuilder {
 
     public static final GsonBuilder INSTANCE = new GsonBuilder();

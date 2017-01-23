@@ -9,7 +9,9 @@ import com.thoughtworks.xstream.security.NullPermission;
 import com.thoughtworks.xstream.security.PrimitiveTypePermission;
 
 import java.io.Writer;
-
+/**
+ * Created by chenxiaobian on 17/1/1.
+ */
 public class XStreamInitializer {
 
     public static XStream getInstance() {

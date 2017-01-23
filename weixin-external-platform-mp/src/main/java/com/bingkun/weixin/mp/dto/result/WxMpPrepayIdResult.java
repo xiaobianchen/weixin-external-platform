@@ -3,6 +3,7 @@ package com.bingkun.weixin.mp.dto.result;
 import java.io.Serializable;
 
 /**
+ * Created by chenxiaobian 17/1/22
  * 在发起微信支付前，需要调用统一下单接口，获取"预支付交易会话标识"返回的结果
  */
 public class WxMpPrepayIdResult implements Serializable {
