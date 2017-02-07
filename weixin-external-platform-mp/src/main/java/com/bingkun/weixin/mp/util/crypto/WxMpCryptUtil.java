@@ -60,7 +60,6 @@ public class WxMpCryptUtil extends WxCryptUtil {
         List<String> keys = new ArrayList<String>(packageParams.keySet());
         Collections.sort(keys);
 
-
         StringBuffer toSign = new StringBuffer();
         for (String key : keys) {
             String value = packageParams.get(key);
