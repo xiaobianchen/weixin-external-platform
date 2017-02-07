@@ -22,6 +22,14 @@
  * 针对org.apache.commons.codec.binary.Base64，
  * 需要导入架包commons-codec-1.9（或commons-codec-1.8等其他版本）
  * 官方下载地址：http://commons.apache.org/proper/commons-codec/download_codec.cgi
+ * <p>
+ * 针对org.apache.commons.codec.binary.Base64，
+ * 需要导入架包commons-codec-1.9（或commons-codec-1.8等其他版本）
+ * 官方下载地址：http://commons.apache.org/proper/commons-codec/download_codec.cgi
+ * <p>
+ * 针对org.apache.commons.codec.binary.Base64，
+ * 需要导入架包commons-codec-1.9（或commons-codec-1.8等其他版本）
+ * 官方下载地址：http://commons.apache.org/proper/commons-codec/download_codec.cgi
  */
 
 // ------------------------------------------------------------------------
@@ -69,8 +77,7 @@ public class WxMpCryptUtil extends WxCryptUtil {
             }
         }
         toSign.append("key=" + signKey);
-        String sign = DigestUtils.md5Hex(toSign.toString())
-                .toUpperCase();
+        String sign = DigestUtils.md5Hex(toSign.toString()).toUpperCase();
         return sign;
     }
 
