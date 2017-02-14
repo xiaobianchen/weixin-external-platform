@@ -6,7 +6,6 @@ import java.util.Date;
 /**
  * Created by chenxiaobian on 17/1/20
  * 累计用户数据接口的返回JSON数据包
- *
  */
 public class WxMpUserCumulate implements Serializable {
 

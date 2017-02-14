@@ -27,9 +27,9 @@ public interface WxMpService {
     /**
      * 验证推送过来的消息的正确性
      *
-     * @param timestamp
-     * @param nonce
-     * @param signature
+     * @param timestamp  时间戳
+     * @param nonce      随机数
+     * @param signature  微信加密签名
      * @return
      */
     public boolean checkSignature(String timestamp, String nonce, String signature);
@@ -266,7 +266,7 @@ public interface WxMpService {
      * @return
      * @throws WxErrorException
      */
-    public WxMenu menuGet() throws WxErrorException;
+    public WxMenu menuGet(String accessToken) throws WxErrorException;
 
     /**
      * 测试个性化菜单匹配结果
@@ -526,11 +526,6 @@ public interface WxMpService {
      */
     public <T, E> T execute(RequestExecutor<T, E> executor, String uri, E data) throws WxErrorException;
 
-    /**
-     * 注入 {@link WxMpConfigStorage} 的实现
-     *
-     * @param wxConfigProvider
-     */
     public void setWxMpConfigStorage(WxMpConfigStorage wxConfigProvider);
 
     /**

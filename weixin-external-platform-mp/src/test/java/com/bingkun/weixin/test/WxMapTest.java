@@ -1,4 +1,4 @@
-package com.bingkun.weixin.common;
+package com.bingkun.weixin.test;
 
 import com.bingkun.weixin.mp.api.WxMpInMemoryConfigStorage;
 import com.bingkun.weixin.mp.api.WxMpService;

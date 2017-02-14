@@ -42,6 +42,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.*;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -52,6 +53,7 @@ import java.util.*;
 /**
  * Created by chenxiaobian on 17/1/20.
  */
+@Component
 public class WxMpServiceImpl implements WxMpService {
 
     /**
@@ -76,6 +78,13 @@ public class WxMpServiceImpl implements WxMpService {
 
     protected WxSessionManager sessionManager = new StandardSessionManager();
 
+    /**
+     *
+     * @param timestamp  时间戳
+     * @param nonce      随机数
+     * @param signature  微信加密签名
+     * @return
+     */
     public boolean checkSignature(String timestamp, String nonce, String signature) {
         try {
             return SHA1.gen(wxMpConfigStorage.getToken(), timestamp, nonce).equals(signature);
@@ -88,6 +97,12 @@ public class WxMpServiceImpl implements WxMpService {
         return getAccessToken(false);
     }
 
+    /**
+     *
+     * @param forceRefresh 强制刷新
+     * @return
+     * @throws WxErrorException
+     */
     public String getAccessToken(boolean forceRefresh) throws WxErrorException {
         if (forceRefresh) {
             wxMpConfigStorage.expireAccessToken();
@@ -95,7 +110,7 @@ public class WxMpServiceImpl implements WxMpService {
         if (wxMpConfigStorage.isAccessTokenExpired()) {
             synchronized (globalAccessTokenRefreshLock) {
                 if (wxMpConfigStorage.isAccessTokenExpired()) {
-                    String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential"
+                    String url = WxConstants.ACCESS_URL
                             + "&appid=" + wxMpConfigStorage.getAppId()
                             + "&secret=" + wxMpConfigStorage.getSecret();
                     try {
@@ -195,8 +210,13 @@ public class WxMpServiceImpl implements WxMpService {
         execute(new SimpleGetRequestExecutor(), url, "menuid=" + menuid);
     }
 
-    public WxMenu menuGet() throws WxErrorException {
-        String url = "https://api.weixin.qq.com/cgi-bin/menu/get";
+    /**
+     * 自定义菜单查询接口
+     * @return
+     * @throws WxErrorException
+     */
+    public WxMenu menuGet(String accessToken) throws WxErrorException {
+        String url = WxConstants.MENU_GET_URL + accessToken;
         try {
             String resultContent = execute(new SimpleGetRequestExecutor(), url, null);
             return WxMenu.fromJson(resultContent);
@@ -683,11 +703,11 @@ public class WxMpServiceImpl implements WxMpService {
             return executor.execute(getHttpclient(), httpProxy, uriWithAccessToken, data);
         } catch (WxErrorException e) {
             WxError error = e.getError();
-      /*
-       * 发生以下情况时尝试刷新access_token
-       * 40001 获取access_token时AppSecret错误，或者access_token无效
-       * 42001 access_token超时
-       */
+          /*
+           * 发生以下情况时尝试刷新access_token
+           * 40001 获取access_token时AppSecret错误，或者access_token无效
+           * 42001 access_token超时
+           */
             if (error.getErrorCode() == 42001 || error.getErrorCode() == 40001) {
                 // 强制设置wxMpConfigStorage它的access token过期了，这样在下一次请求里就会刷新access token
                 wxMpConfigStorage.expireAccessToken();

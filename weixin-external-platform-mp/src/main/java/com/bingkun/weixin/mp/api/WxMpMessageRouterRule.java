@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+/**
+ * Created by chenxiaobian on 2017/2/10
+ */
 public class WxMpMessageRouterRule {
 
     private final WxMpMessageRouter routerBuilder;
