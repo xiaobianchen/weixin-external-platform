@@ -1,9 +1,8 @@
 package com.bingkun.weixin.test;
 
-import com.bingkun.weixin.mp.api.WxMpInMemoryConfigStorage;
-import com.bingkun.weixin.mp.api.WxMpService;
-import com.bingkun.weixin.mp.api.WxMpServiceImpl;
-import com.bingkun.weixin.mp.dto.WxMpCustomMessage;
+import com.bingkun.weixin.api.WxMpInMemoryConfigStorage;
+import com.bingkun.weixin.api.WxMpService;
+import com.bingkun.weixin.api.impl.WxMpServiceImpl;
 import org.junit.Test;
 
 /**
@@ -22,9 +21,7 @@ public class WxMapTest {
         WxMpService wxMpService = new WxMpServiceImpl();
         wxMpService.setWxMpConfigStorage(configStorage);
 
-        String openid="o8APSvrnGt0nyw3tCYlEFaTNfzWc";
-        WxMpCustomMessage message = WxMpCustomMessage.TEXT().toUser(openid).content("Hello World").build();
-        wxMpService.customMessageSend(message);
+
     }
 
 

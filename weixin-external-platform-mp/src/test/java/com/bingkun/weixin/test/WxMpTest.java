@@ -1,9 +1,8 @@
 package com.bingkun.weixin.test;
 
-import com.bingkun.weixin.common.dto.menu.WxMenu;
-import com.bingkun.weixin.mp.api.WxMpInMemoryConfigStorage;
-import com.bingkun.weixin.mp.api.WxMpService;
-import com.bingkun.weixin.mp.api.WxMpServiceImpl;
+import com.bingkun.weixin.api.WxMpInMemoryConfigStorage;
+import com.bingkun.weixin.api.WxMpService;
+import com.bingkun.weixin.api.impl.WxMpServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -39,9 +38,5 @@ public class WxMpTest {
         System.out.println(accessToken);
     }
 
-    @Test
-    public void testGetMenu(){
-        WxMenu wxMenu = wxMpService.menuGet(wxMpService.getAccessToken());
-        System.out.println(wxMenu);
-    }
+
 }
